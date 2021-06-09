@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>My Sites</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <header>
+      <a class="link-header" href="index.html">Главная</a>
+    </header>
+    <main>
+      <h1>Мои сайты</h1>
+      <h2><b>От легких сайтов до неплохих проектов</b></h2>
+      <p><a class="link-text" href="http://photostudioremark.tilda.ws/"><b>Сайт</b></a> про фотостудию Ремарк сделанный на конструкторе тильда</p>
+        <p><a class="link-text" href="https://klimlimanski.github.io/PokemonGl/"><b>Финальный сайт</b></a> в этом сайте находится мини-биография медиафраншизы Pokemon!</p>
+        <p><a class="link-text" href="https://klimlimanski.github.io/CyberN.io/"><b>Сайт</b></a> про новости игр , киберспорта и консолей</p>
+      <p><a class="link-text" href="https://klimlimanski.github.io/KybersportSchool/"><b>Сайт</b></a> киберспортивной школы (мой первый сайт на html)</p>
+        <p><a class="link-text" href="https://klimlimanski.github.io/Samoilovi/"><b>Сайт</b></a> семьи Самойловых сделан по макету</p>
+        <p>Бонус: <a class="link-text" href="http://avatars.main.tilda.ws/"><b>Сайт</b></a> биографии 3 аватаров (Сериал : Аватар легенда об Аанге)</p>
+    </main>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style><div style="text-align:center">
+  <h2>Галлерея сайтов</h2>
+  <p>Нажмите на изображение ниже</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="https://skr.sh/i/090621/2H6YhcwG.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2009-06-2021%2017:43:07.jpg" alt="Pokemons" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://skr.sh/i/090621/EVuBX10z.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2009-06-2021%2017:43:56.jpg" alt="News" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://skr.sh/i/090621/o2IYFg8I.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2009-06-2021%2017:45:07.jpg" alt="KybersportSchool" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://skr.sh/i/090621/C1HxWz5x.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2009-06-2021%2017:45:58.jpg" alt="Samoilovi" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+
+    <footer>
+      <a class="social" href=""><img src="https://mars.algoritmika.org/uploads/2021/04/social1_0_1618254571.png" width="100px" height="100px"/></a>
+      <a class="social" href=""><img src="https://mars.algoritmika.org/uploads/2021/04/Group%201_0_1618254571.png" width="100px" height="100px"/></a>
+      <a class="social" href=""><img src="https://mars.algoritmika.org/uploads/2021/04/social3_0_1618254571.png" width="100px" height="100px"/></a>
+    </footer>
+  </body>
+</html>
